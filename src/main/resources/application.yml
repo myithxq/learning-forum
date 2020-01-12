@@ -1,0 +1,50 @@
+#设置服务器默认端口
+server:
+  port: 8888
+
+#设置日志  mybatis 执行的sql语句在控制台输出
+logging:
+  level:
+    com:
+      hxq:
+        forum:
+          dao: debug
+
+#接入github登录 开发者信息
+github:
+  redirect:
+    uri: http://localhost:8888/callback
+  client:
+    id: 1f2460797404f663a238
+    secret: 2c93e44bb58ec4db7c913d57545652f19a307318
+#配置数据源
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: hxq
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#spring:
+#  datasource:
+#    druid:
+#      url: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+#      driver-class-name: com.mysql.jdbc.Driver
+#      username: root
+#      password: hxq
+#      initial-size: 10
+#      max-active: 50
+#      min-idle: 10
+#      max-wait: 60000
+#      pool-prepared-statements: true
+#      max-pool-prepared-statement-per-connection-size: 20
+#      validation-query: SELECT 1 FROM DUAL
+#      test-on-borrow: false
+#      test-on-return: false
+#      test-while-idle: true
+#      time-between-eviction-runs-millis: 60000
+#      filters: stat,wall
+#      filter:
+#        wall:
+#          config:
+#            deny-tables:
