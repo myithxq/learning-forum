@@ -33,7 +33,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.31</version>
+            <version>1.2.62</version>
         </dependency>
         <!-- 添加MySQL依赖 -->
         <dependency>
